@@ -1,9 +1,9 @@
-resource "aws_vpc" "main" {
-  cidr_block = "10.0.0.0/16"
-  tags {
+resource "aws_internet_gateway" "igw1" {
+  vpc_id = "${aws_vpc.dev.id}"
+ tags {
       Name = "terraform-january-${var.Created_by}-${count.index +1}"
       Env = "${var.Env}"
       Dept = "${var.Dept}"
-      Created_by = "${var.Created_by}"
+      Created_by = "${var.Create_by}"
    }
 }
