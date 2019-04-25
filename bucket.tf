@@ -5,7 +5,7 @@ provider "aws" {
 resource "aws_s3_bucket" "newbucket1" {
   bucket = "terrform-january-daud1"
   tags { 
-      Name = "terrform-state-january-daud1"
+      Name = "terrform-january-daud"
       Env = "dev"
       Dept = "IT"
       created_by = "daud"
