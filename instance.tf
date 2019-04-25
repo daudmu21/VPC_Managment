@@ -6,7 +6,8 @@ resource "aws_instance" "web" {
    subnet_id = "${aws_subnet.dev.id}"
    associate_public_ip_address = "true"
    vpc_security_group_ids = "{aws_security_group.allow.ssh.id}"
-   
+
+   user_data = "${file("userdata.sh")}"
    
    tags {
       Name = "terraform-january-${var.Created_by}-${count.index +1}"
