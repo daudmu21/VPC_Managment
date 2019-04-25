@@ -9,6 +9,6 @@ resource "aws_route_table" "r" {
       Name = "terraform-january-${var.Created_by}-${count.index +1}"
       Env = "${var.Env}"
       Dept = "${var.Dept}"
-      Created_by = "${var.Create_by}"
+      Created_by = "${var.Created_by}"
    }
 }

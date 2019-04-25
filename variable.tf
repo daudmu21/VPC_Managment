@@ -6,7 +6,7 @@ variable "count" {}
 variable "key_name" {}
 variable "Env" {}
 variable "Dept" {}
-variable "Create_by" {}
+variable "Created_by" {}
 variable "Appname" {}
 
 variable "min_size" {}
